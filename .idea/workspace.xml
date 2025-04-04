@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="adding comment to the code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,13 +101,22 @@
       <option name="project" value="LOCAL" />
       <updated>1743787034950</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Generate doc , by dart-doc">
+      <option name="closed" value="true" />
+      <created>1743787776798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743787776798</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding bibliotheque code" />
     <MESSAGE value="resolving error in starting" />
     <MESSAGE value="adding comment to the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding comment to the code" />
+    <MESSAGE value="Generate doc , by dart-doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate doc , by dart-doc" />
   </component>
 </project>
