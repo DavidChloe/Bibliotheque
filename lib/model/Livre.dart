@@ -1,39 +1,42 @@
+/// @file Livre.dart
+/// @brief Modèle de données représentant un livre.
+
 import 'Auteur.dart';
 
+/// @class Livre
+/// @brief Classe représentant un livre.
+/// 
+/// Cette classe contient les informations sur un livre ainsi que son auteur.
 class Livre {
-  //Attributs privés
   int? _idLivre;
   String _nomLivre;
   Auteur _auteur;
 
-  // Constructeur
+  /// Constructeur de la classe Livre.
+  /// 
+  /// @param idLivre Identifiant unique du livre.
+  /// @param nomLivre Nom du livre.
+  /// @param auteur Objet Auteur associé au livre.
   Livre({int? idLivre, required String nomLivre, required Auteur auteur})
       : _idLivre = idLivre,
         _nomLivre = nomLivre,
         _auteur = auteur;
 
-  // Getters
+  /// Retourne l'identifiant du livre.
   int? get idLivre => _idLivre;
-  String get nomLivre => _nomLivre;
-  Auteur get auteur => _auteur; // Retourne L'obtet Auteur complet
 
-  // Setters
+  /// Retourne le nom du livre.
+  String get nomLivre => _nomLivre;
+
+  /// Retourne l'objet Auteur associé au livre.
+  Auteur get auteur => _auteur;
+
+  /// Modifie le nom du livre.
   set nomLivre(String value) {
     _nomLivre = value;
   }
 
-
-
-  // Méthode pour convertir un Livre en Map (pour la base de données)
- /* Map<String, dynamic> toMap() {
-    return {
-      'idLivre': _idLivre,
-      'nomLivre': _nomLivre,
-      'idAuteur': _auteur.idAuteur
-    };
-  }*/
-
-  // Méthode pour créer un Livre à partir d'un Map (depuis la base de données)
+  /// Crée un objet Livre à partir d'un Map (base de données).
   factory Livre.fromMap(Map<String, dynamic> map) {
     return Livre(
       idLivre: map['idLivre'],

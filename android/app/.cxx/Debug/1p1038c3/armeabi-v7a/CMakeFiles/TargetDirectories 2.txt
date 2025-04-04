@@ -1,2 +1,0 @@
-/Users/ValadonChloe/Documents/GitHub/Bibliotheque/android/app/.cxx/Debug/1p1038c3/armeabi-v7a/CMakeFiles/edit_cache.dir
-/Users/ValadonChloe/Documents/GitHub/Bibliotheque/android/app/.cxx/Debug/1p1038c3/armeabi-v7a/CMakeFiles/rebuild_cache.dir

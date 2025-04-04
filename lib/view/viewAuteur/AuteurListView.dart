@@ -6,6 +6,9 @@ import '../../model/Auteur.dart';
 import 'AjouterAuteurView.dart';
 import 'ModifierAuteurView.dart';
 
+/// Ecran affichant la liste des auteurs.
+///
+/// Permet de visualiser, modifier et supprimer des auteurs, ainsi que d'ajouter de nouveaux auteurs.
 class AuteurListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

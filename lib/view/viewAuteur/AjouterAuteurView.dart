@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 
+/// Ecran pour ajouter un nouvel auteur.
+///
+/// Contient un formulaire pour saisir le nom de l'auteur et un bouton pour l'ajouter à la base de données.
 class AjouterAuteurView extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _nomAuteurController = TextEditingController();

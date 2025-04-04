@@ -4,6 +4,9 @@ import 'package:provider/provider.dart';
 import '../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../view/viewLivre/AjouterLivreView.dart';
 
+/// Ecran d'accueil de l'application Bibliothèque Numérique.
+///
+/// Cet écran affiche une liste de livres et un menu latéral permettant d'ajouter des livres ou de gérer les auteurs.
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -31,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: <Widget>[
+          children: [
             Container(
               height: 100, // Ajuste la hauteur du DrawerHeader
               decoration: const BoxDecoration(
@@ -41,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(32), // Ajuste le padding interne
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
+                  children: [
                     Text(
                       'Menu',
                       style: TextStyle(

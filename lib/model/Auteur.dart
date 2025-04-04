@@ -1,25 +1,30 @@
+/// Classe représentant un auteur.
+///
+/// Chaque auteur a un identifiant unique et un nom associé.
 class Auteur {
-
   int? _idAuteur = 0;
   String _nomAuteur = '';
 
-  // Constructeur
+  /// Constructeur de la classe Auteur.
+  ///
+  /// [idAuteur] est facultatif, mais [nomAuteur] est requis.
   Auteur({int? idAuteur, required String? nomAuteur}) {
     _idAuteur = idAuteur;
     _nomAuteur = nomAuteur!;
   }
 
-  // Getters
+  /// Obtient l'identifiant de l'auteur.
   int? get idAuteur => _idAuteur;
 
+  /// Obtient le nom de l'auteur.
   String get nomAuteur => _nomAuteur;
 
-  // Setters
+  /// Modifie le nom de l'auteur.
   set nomAuteur(String? nomAuteur) {
     _nomAuteur = nomAuteur!;
   }
 
-  // Méthode pour convertir un Auteur en Map (pour la base de données)
+  /// Convertit un auteur en Map pour le stockage en base de données.
   Map<String, dynamic> toMap() {
     return {
       'IdAuteur': _idAuteur,
@@ -27,13 +32,11 @@ class Auteur {
     };
   }
 
-  // Méthode pour créer un Auteur à partir d'un Map (depuis la base de données)
+  /// Crée un objet Auteur à partir d'une Map issue de la base de données.
   factory Auteur.fromMap(Map<String, dynamic> map) {
     return Auteur(
       idAuteur: map['idAuteur'],
       nomAuteur: map['nomAuteur'],
     );
   }
-
-
 }

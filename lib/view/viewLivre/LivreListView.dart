@@ -5,6 +5,9 @@ import 'AjouterLivreView.dart';
 import 'ModifierLivreView.dart';
 import '../../model/Livre.dart';
 
+/// Widget qui affiche une liste de livres.
+///
+/// Permet de visualiser les livres, les modifier et les supprimer.
 class LivreListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +37,7 @@ class LivreListView extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      icon: Icon(Icons.delete, color:Colors.deepOrange),
+                      icon: Icon(Icons.delete, color: Colors.deepOrange),
                       onPressed: () {
                         livreViewModel.confirmerSuppressionLivre(context, livre, index);
                       },

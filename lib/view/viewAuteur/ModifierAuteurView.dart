@@ -3,6 +3,9 @@ import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 import '../../model/Auteur.dart';
 
+/// Ecran pour modifier un auteur existant.
+///
+/// Affiche un formulaire pré-rempli avec le nom de l'auteur et permet de le mettre à jour.
 class ModifierAuteurView extends StatelessWidget {
   final Auteur auteur;
   final _formKey = GlobalKey<FormState>();

@@ -4,6 +4,9 @@ import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 import '../../model/Livre.dart';
 
+/// Widget pour ajouter un nouveau livre.
+///
+/// Affiche un formulaire permettant de saisir le nom du livre et de sélectionner son auteur.
 class AjouterLivreView extends StatefulWidget {
   @override
   _AjouterLivreViewState createState() => _AjouterLivreViewState();
@@ -18,7 +21,7 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Provider.of<AuteurViewModel>(context, listen: false).chargerAuteurs();
+      Provider.of<LivreViewModel>(context, listen: false).chargerAuteurs();
     });
   }
 
@@ -47,15 +50,15 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
                 },
               ),
               SizedBox(height: 16),
-              Consumer<AuteurViewModel>(
-                builder: (context, auteurViewModel, child) {
+              Consumer<LivreViewModel>(
+                builder: (context, livreViewModel, child) {
                   return DropdownButtonFormField<int>(
                     value: _selectedAuteurId,
                     decoration: InputDecoration(
                       labelText: 'Auteur',
                       border: OutlineInputBorder(),
                     ),
-                    items: auteurViewModel.auteurs.map((auteur) {
+                    items: livreViewModel.auteurs.map((auteur) {
                       return DropdownMenuItem<int>(
                         value: auteur.idAuteur,
                         child: Text(auteur.nomAuteur),

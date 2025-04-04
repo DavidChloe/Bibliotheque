@@ -3,15 +3,16 @@ import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../model/Livre.dart';
 
+/// Widget pour modifier un livre existant.
+///
+/// Affiche un formulaire pré-rempli avec les informations du livre et permet de les mettre à jour.
 class ModifierLivreView extends StatefulWidget {
   final Livre livre;
 
   ModifierLivreView({required this.livre});
-
   @override
   _ModifierLivreViewState createState() => _ModifierLivreViewState();
 }
-
 
 class _ModifierLivreViewState extends State<ModifierLivreView> {
   final _formKey = GlobalKey<FormState>();
