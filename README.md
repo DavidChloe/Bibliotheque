@@ -14,3 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+M'a permis de resoudre l'erreur lors du lancement :
+https://stackoverflow.com/questions/79354466/i-am-getting-error-of-something-while-building-app-in-vscode-with-flutter

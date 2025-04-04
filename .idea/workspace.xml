@@ -4,7 +4,274 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="resolving error in starting" />
+    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="resolving error in starting">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/configure_command" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/configure_stderr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/configure_stdout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/generate_cxx_metadata_742_timing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/metadata_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/packaged_manifests/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-8699adb1dd336b26511df848a716bd42-VFS/all-product-headers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/DerivedSources/Pods_Runner_vers.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/7187679823f38a2a940e0043cdf9d637-common-args.resp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods-Runner-dummy.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods-Runner-dummy.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods-Runner-dummy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods-Runner-dummy.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods_Runner.LinkFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods_Runner_libtool_dependency_info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods_Runner_vers.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods_Runner_vers.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods_Runner_vers.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/Pods_Runner_vers.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/Pods-Runner.build/Objects-normal/x86_64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy-all-non-framework-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy-all-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy-generated-files.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy-own-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy-project-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy.DependencyMetadataFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin-sqflite_darwin_privacy.build/sqflite_darwin_privacy.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/DerivedSources/sqflite_darwin_vers.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/7187679823f38a2a940e0043cdf9d637-common-args.resp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteCursor.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteCursor.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteCursor.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteCursor.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabase.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabase.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabase.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabase.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseAdditions.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseAdditions.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseAdditions.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseAdditions.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseQueue.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseQueue.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseQueue.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinDatabaseQueue.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinResultSet.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinResultSet.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinResultSet.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDarwinResultSet.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDatabase.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDatabase.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDatabase.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteDatabase.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteOperation.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteOperation.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteOperation.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqfliteOperation.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqflitePlugin.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqflitePlugin.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqflitePlugin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/SqflitePlugin.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin-dummy.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin-dummy.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin-dummy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin-dummy.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin.LinkFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin_dependency_info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin_vers.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin_vers.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin_vers.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Pods.build/Debug/sqflite_darwin.build/Objects-normal/x86_64/sqflite_darwin_vers.o.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Flutter Assemble.build/InputFileList-33CC111E2044C6BF0003C045-FlutterInputs-3a064357e30aa1bbe9554feed2173308-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Flutter Assemble.build/InputFileList-33CC111E2044C6BF0003C045-FlutterInputs-6cd74c880b1af6887f95ed59ce2d886a-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Flutter Assemble.build/OutputFileList-33CC111E2044C6BF0003C045-FlutterOutputs-6053bcf4188a1e05ffdbc0907fd94de3-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Flutter Assemble.build/OutputFileList-33CC111E2044C6BF0003C045-FlutterOutputs-cf23a918638d386da4d29646e24bd6a4-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Flutter Assemble.build/Script-33CC111E2044C6BF0003C045.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner-18c1723432283e0cc55f10a6dcfd9e02-VFS/all-product-headers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Base.lproj/MainMenu-PartialInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/Entitlements.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/GeneratedAssetSymbols-Index 2.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/GeneratedAssetSymbols-Index.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/GeneratedAssetSymbols.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/GeneratedAssetSymbols.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/Pods-Runner-checkManifestLockResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/DerivedSources/bibliotheque-Swift.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/InputFileList-F083E4EA3608AAC708C4703E-Pods-Runner-frameworks-Debug-input-files-c4c9c5a824550c8e83ea470e7b31d05b-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/InputFileList-F083E4EA3608AAC708C4703E-Pods-Runner-frameworks-Debug-input-files-e4e9680a652c8471cb11e89f68499524-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/AppDelegate.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/AppDelegate.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/AppDelegate.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/AppDelegate.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/AppDelegate.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedAssetSymbols.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedAssetSymbols.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedAssetSymbols.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedPluginRegistrant.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedPluginRegistrant.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedPluginRegistrant.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedPluginRegistrant.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/GeneratedPluginRegistrant.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/MainFlutterWindow.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/MainFlutterWindow.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/MainFlutterWindow.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/MainFlutterWindow.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/MainFlutterWindow.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/Runner-OutputFileMap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/Runner-master-emit-module.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/Runner-master-emit-module.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/Runner-master.priors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/Runner_const_extract_protocols.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque-Swift.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.LinkFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.SwiftConstValuesFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.SwiftFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.abi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.swiftmodule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque.swiftsourceinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/arm64/bibliotheque_dependency_info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/AppDelegate.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/AppDelegate.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/AppDelegate.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/AppDelegate.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/AppDelegate.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedAssetSymbols.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedAssetSymbols.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedPluginRegistrant.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedPluginRegistrant.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedPluginRegistrant.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedPluginRegistrant.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/GeneratedPluginRegistrant.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/MainFlutterWindow.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/MainFlutterWindow.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/MainFlutterWindow.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/MainFlutterWindow.swiftconstvalues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/MainFlutterWindow.swiftdeps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/Runner-OutputFileMap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/Runner-master-emit-module.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/Runner-master-emit-module.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/Runner-master.priors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/Runner_const_extract_protocols.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque-Swift.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.LinkFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.SwiftConstValuesFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.SwiftFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.abi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.swiftmodule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque.swiftsourceinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Objects-normal/x86_64/bibliotheque_dependency_info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/OutputFileList-F083E4EA3608AAC708C4703E-Pods-Runner-frameworks-Debug-output-files-a2da1f953308036e55f4f512b86ce73d-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/OutputFileList-F083E4EA3608AAC708C4703E-Pods-Runner-frameworks-Debug-output-files-c1489a5c357a0dadc93efabe3d472b2c-resolved.xcfilelist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Script-3399D490228B24CF009A79C7.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Script-F083E4EA3608AAC708C4703E.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/Script-F77F4451ACA38B5B44324F96.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/SwiftStdLibToolInputDependencies.dep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/assetcatalog_dependencies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/assetcatalog_generated_info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-DebugDylibInstallName-normal-arm64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-DebugDylibInstallName-normal-x86_64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-DebugDylibPath-normal-arm64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-DebugDylibPath-normal-x86_64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-ExecutorLinkFileList-normal-arm64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-ExecutorLinkFileList-normal-x86_64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-all-non-framework-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-all-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-generated-files.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-own-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque-project-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque.DependencyMetadataFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque.app.xcent" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque.app.xcent.der" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/Runner.build/Debug/Runner.build/bibliotheque.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Logs/Build/71D4EAD9-4FBF-4C15-87EE-F053AEDD09B6.xcactivitylog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Logs/Build/8D434300-1471-479D-89E6-9032739CF9A5.xcactivitylog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Logs/Build/LogStoreManifest.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/widget/Cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/Cards.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,42 +283,42 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DavidChloe"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DavidChloe&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DavidChloe/Bibliotheque.git",
-    "accountId": "e94c6f10-d8ee-4290-8235-e03b510c26bf"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DavidChloe/Bibliotheque.git&quot;,
+    &quot;accountId&quot;: &quot;e94c6f10-d8ee-4290-8235-e03b510c26bf&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2vGiG7ppBRqJei0oTGQ0copQQG2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Flutter.Main">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="Bibliotheque" />
