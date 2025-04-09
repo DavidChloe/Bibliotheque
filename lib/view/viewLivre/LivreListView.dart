@@ -4,6 +4,8 @@ import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import 'AjouterLivreView.dart';
 import 'ModifierLivreView.dart';
 import '../../model/Livre.dart';
+import '../widget/Cards.dart';
+
 
 /// Widget qui affiche une liste de livres.
 ///

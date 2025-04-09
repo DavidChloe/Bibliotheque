@@ -4,7 +4,53 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc" />
+    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/kernel_snapshot_program.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/kernel_snapshot_program.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/kernel_snapshot_program.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/caf0ba65ea28751629bbdd7a0ccc9690/kernel_snapshot_program.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/x86/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/x86/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/x86_64/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/x86_64/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/arm64-v8a/metadata_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/arm64-v8a/metadata_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/metadata_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/armeabi-v7a/metadata_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/x86/metadata_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/x86/metadata_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/x86_64/metadata_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/cxx/Debug/1p1038c3/logs/x86_64/metadata_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/ExplicitPrecompiledModules/_errno-2QQSK88PXZ8SKH35JLKJVSIOH.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/ExplicitPrecompiledModules/runetype-3HXWJEA6RMN4XGRMUICPMZ8EJ.scan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/XCBuildData/build.db" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/Build/Intermediates.noindex/XCBuildData/build.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Products/Debug/App.framework/Versions/A/Resources/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/Build/Products/Debug/App.framework/Versions/A/Resources/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.app/Contents/Frameworks/App.framework/Versions/A/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.app/Contents/Frameworks/App.framework/Versions/A/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.app/Contents/Frameworks/App.framework/Versions/A/Resources/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.app/Contents/Frameworks/App.framework/Versions/A/Resources/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.app/Contents/Frameworks/App.framework/Versions/A/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.app/Contents/Frameworks/App.framework/Versions/A/_CodeSignature/CodeResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/Build/Products/Debug/bibliotheque.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/ModuleCache.noindex/3TC8GRNGGQHKN/FlutterMacOS-3SX5KMAQY0IT1.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/ModuleCache.noindex/3TC8GRNGGQHKN/FlutterMacOS-3SX5KMAQY0IT1.pcm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/ModuleCache.noindex/3TC8GRNGGQHKN/sqflite_darwin-26GZSLSOLEOIC.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/ModuleCache.noindex/3TC8GRNGGQHKN/sqflite_darwin-26GZSLSOLEOIC.pcm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/ModuleCache.noindex/Session.modulevalidation" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/ModuleCache.noindex/Session.modulevalidation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/SDKStatCaches.noindex/macosx15.2-24C94-1dd28740b163f220e3e9b9fd2a542f53.sdkstatcache" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/SDKStatCaches.noindex/macosx15.2-24C94-1dd28740b163f220e3e9b9fd2a542f53.sdkstatcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/macos/info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/macos/info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/widget/Cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/Cards.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +94,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ValadonChloe/Documents/GitHub/Bibliotheque&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
@@ -109,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743787776798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Generate doc , by dart-doc">
+      <option name="closed" value="true" />
+      <created>1743789192435</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743789192436</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
