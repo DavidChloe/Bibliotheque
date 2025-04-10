@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc" />
+    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/Auteur.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/Auteur.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/Livre.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/Livre.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/AuteurDatabase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/AuteurDatabase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/Database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/Database.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/LivreDatabase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/LivreDatabase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/HomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/HomeScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewAuteur/AjouterAuteurView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewAuteur/AjouterAuteurView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewAuteur/ModifierAuteurView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewAuteur/ModifierAuteurView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/AjouterLivreView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/AjouterLivreView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/ModifierLivreView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/ModifierLivreView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/widget/Cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/Cards.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/widget/ConfirmDeleteDialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/ConfirmDeleteDialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/widget/ImpossibleDeleteDialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/ImpossibleDeleteDialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/viewmodel/viewModelAuteur/AuteurViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/viewmodel/viewModelAuteur/AuteurViewModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/viewmodel/viewModelLivre/LivreViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/viewmodel/viewModelLivre/LivreViewModel.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,23 +57,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ValadonChloe/Documents/GitHub/Bibliotheque&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ValadonChloe/Documents/GitHub/Bibliotheque",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Flutter.Main">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="Bibliotheque" />

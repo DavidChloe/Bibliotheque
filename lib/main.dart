@@ -5,7 +5,7 @@
 /// les ViewModels de `Livre` et `Auteur`, et configure les routes de navigation.
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';  //flutter pub add provider
 import 'viewmodel/viewModelAuteur/AuteurViewModel.dart';
 import 'view/viewAuteur/AuteurListView.dart';
 import 'viewmodel/viewModelLivre/LivreViewModel.dart';
