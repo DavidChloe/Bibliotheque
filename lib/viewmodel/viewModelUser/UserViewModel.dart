@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 import '../../model/User.dart';
+import '../../model/User.dart';
+
 import '../../repository/UserDatabase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

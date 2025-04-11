@@ -4,6 +4,7 @@
 /// Ce fichier initialise l'application Flutter en utilisant MultiProvider pour gérer
 /// les ViewModels de `Livre` et `Auteur`, et configure les routes de navigation.
 
+import 'package:bibliotheque/view/viewUser/LoginView.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';  //flutter pub add provider
 import 'viewmodel/viewModelAuteur/AuteurViewModel.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         ),
         home: HomePage(),
         routes: {
+          '/Utilisateurs': (context)=> LoginView(),
           '/livres': (context) => LivreListView(),
           '/auteurs': (context) => AuteurListView(),
           '/ajouterLivre': (context) => AjouterLivreView(),

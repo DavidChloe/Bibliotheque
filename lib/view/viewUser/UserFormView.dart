@@ -1,94 +1,88 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../../viewmodel/viewModelUser/UserViewModel.dart';
-import '../../model/user.dart';
+class User {
+  // Attributs privés
+  int _idUser;
+  String _nomUser;
+  String _prenomUser;
+  String _loginUser;
+  String _mdpUser;
+  String _roleUser;
 
-class UserFormView extends StatefulWidget {
-  final User? user;
+  // Constructeur
+  User({
+    required int idUser,
+    required String nomUser,
+    required String prenomUser,
+    required String loginUser,
+    required String mdpUser,
+    required String roleUser,
+  })  : _idUser = idUser,
+        _nomUser = nomUser,
+        _prenomUser = prenomUser,
+        _loginUser = loginUser,
+        _mdpUser = mdpUser,
+        _roleUser = roleUser;
 
-  const UserFormView({Key? key, this.user}) : super(key: key);
+  // Getters
+  int get idUser => _idUser;
+  String get nomUser => _nomUser;
+  String get prenomUser => _prenomUser;
+  String get loginUser => _loginUser;
+  String get mdpUser => _mdpUser;
+  String get roleUser => _roleUser;
 
-  @override
-  _UserFormViewState createState() => _UserFormViewState();
-}
-
-class _UserFormViewState extends State<UserFormView> {
-  final _userNameController = TextEditingController();
-  final _passwordController = TextEditingController();
-  String _role = 'user'; // Default role
-  bool _isEditing = false;
-
-  @override
-  void initState() {
-    super.initState();
-    if (widget.user != null) {
-      _isEditing = true;
-      _userNameController.text = widget.user!.userName;
-      _role = widget.user!.role;
-    }
+  // Setters
+  set nomUser(String value) {
+    _nomUser = value;
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(_isEditing ? 'Edit User' : 'Add User'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: _userNameController,
-              decoration: const InputDecoration(labelText: 'Username'),
-            ),
-            TextField(
-              controller: _passwordController,
-              decoration: const InputDecoration(labelText: 'Password'),
-              obscureText: true,
-            ),
-            DropdownButtonFormField<String>(
-              value: _role,
-              decoration: const InputDecoration(labelText: 'Role'),
-              items: ['admin', 'user'].map((String role) {
-                return DropdownMenuItem<String>(
-                  value: role,
-                  child: Text(role),
-                );
-              }).toList(),
-              onChanged: (value) {
-                setState(() {
-                  _role = value!;
-                });
-              },
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () async {
-                final userName = _userNameController.text;
-                final password = _passwordController.text;
-                final userViewModel = Provider.of<UserViewModel>(context, listen: false);
+  set prenomUser(String value) {
+    _prenomUser = value;
+  }
 
-                if (_isEditing) {
-                  // Update existing user
-                  final updatedUser = User(
-                    id: widget.user!.id,
-                    userName: userName,
-                    passwordHash: widget.user!.passwordHash, // Keep the existing hash
-                    role: _role,
-                  );
-                  await userViewModel.updateUser(updatedUser);
-                } else {
-                  // Register new user
-                  await userViewModel.register(userName, password, _role);
-                }
-                Navigator.pop(context);
-              },
-              child: Text(_isEditing ? 'Update User' : 'Add User'),
-            ),
-          ],
-        ),
-      ),
+  set loginUser(String value) {
+    _loginUser = value;
+  }
+
+  set mdpUser(String value) {
+    _mdpUser = value;
+  }
+
+  set roleUser(String value) {
+    _roleUser = value;
+  }
+
+  // Conversion vers Map
+  Map<String, dynamic> toMap() {
+    return {
+      'idUser': _idUser,
+      'nomUser': _nomUser,
+      'prenomUser': _prenomUser,
+      'loginUser': _loginUser,
+      'mdpUser': _mdpUser,
+      'roleUser': _roleUser,
+    };
+  }
+
+  // Création d'un User à partir d'un Map (utile pour la récupération depuis une base de données)
+  factory User.fromMap(Map<String, dynamic> map) {
+    return User(
+      idUser: map['idUser'],
+      nomUser: map['nomUser'],
+      prenomUser: map['prenomUser'],
+      loginUser: map['loginUser'],
+      mdpUser: map['mdpUser'],
+      roleUser: map['roleUser'],
     );
   }
+
+  // Redéfinition de l'opérateur ==
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is User && other._idUser == _idUser; // Comparaison basée sur l'id
+  }
+
+  // Redéfinition de hashCode
+  @override
+  int get hashCode => _idUser.hashCode; // Hash basé sur l'id
 }
