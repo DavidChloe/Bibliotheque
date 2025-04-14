@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelUser/UserViewModel.dart';
 import 'UserFormView.dart';
+import 'UserListView.dart'; // ✅ N'oublie pas d'importer la vue
 
 class ModifierUserView extends StatefulWidget {
   const ModifierUserView({super.key});
@@ -22,7 +23,7 @@ class _ModifierUserViewState extends State<ModifierUserView> {
   void initState() {
     super.initState();
     final userVM = Provider.of<UserViewModel>(context, listen: false);
-    // On cherche l'utilisateur connecté dans la liste chargée
+
     final user = userVM.utilisateurs.firstWhere(
           (u) => u.nomUser == userVM.userName,
       orElse: () => throw Exception("Utilisateur non trouvé"),
@@ -93,6 +94,17 @@ class _ModifierUserViewState extends State<ModifierUserView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => const UserFormView()),
+                    );
+                  },
+                ),
+                const SizedBox(height: 12),
+                ElevatedButton.icon(
+                  icon: const Icon(Icons.group),
+                  label: const Text("Voir les utilisateurs"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const UserListView()),
                     );
                   },
                 ),
