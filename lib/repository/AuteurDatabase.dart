@@ -4,8 +4,6 @@ import 'Database.dart';
 class AuteurDatabase {
   final DatabaseClient _dbClient = DatabaseClient();
 
-  /// Ajoute un nouvel auteur à la base de données.
-  ///
   /// Retourne un `Future` contenant l'ID de l'auteur nouvellement inséré.
   Future<int> ajouterAuteur(String nomAuteur) async {
     final db = await _dbClient.database;

@@ -2,10 +2,22 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "args",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/args-2.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/async-2.12.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "bcrypt",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/bcrypt-1.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "boolean_selector",
@@ -42,6 +54,12 @@
       "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
       "languageVersion": "3.1"
+    },
+    {
+      "name": "dev_build",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/dev_build-1.1.2+8",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
     },
     {
       "name": "fake_async",
@@ -84,6 +102,18 @@
       "rootUri": "file:///Users/ValadonChloe/development/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/http-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/http_parser-4.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "leak_tracker",
@@ -188,10 +218,28 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "pool",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/pool-1.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "process_run",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/process_run-1.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "provider",
       "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/provider-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "pub_semver",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/pub_semver-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "shared_preferences",
@@ -266,6 +314,18 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "sqflite_common_ffi",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/sqflite_common_ffi-2.3.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
+      "name": "sqflite_common_ffi_web",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/sqflite_common_ffi_web-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "sqflite_darwin",
       "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.2",
       "packageUri": "lib/",
@@ -274,6 +334,12 @@
     {
       "name": "sqflite_platform_interface",
       "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/sqflite_platform_interface-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "sqlite3",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/sqlite3-2.7.5",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -344,13 +410,19 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "yaml",
+      "rootUri": "file:///Users/ValadonChloe/.pub-cache/hosted/pub.dev/yaml-3.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "bibliotheque",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-04-10T23:54:39.565771Z",
+  "generated": "2025-04-14T06:47:14.418940Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/ValadonChloe/development/flutter",

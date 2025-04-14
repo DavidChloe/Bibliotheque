@@ -8,40 +8,15 @@ import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../model/Auteur.dart';
 import '../../model/Livre.dart';
 import '../../view/widget/ConfirmDeleteDialog.dart';
-import '../../view/widget/ConfirmDeleteDialog.dart';
+import '../../view/widget/Cards.dart';
 import '../../view/widget/ImpossibleDeleteDialog.dart';
 
-/// [LivreViewModel] est un [ChangeNotifier] qui gère l'état et les opérations
-/// liées aux livres et aux auteurs.
-///
-/// Cette classe fournit des méthodes pour récupérer, ajouter, mettre à jour,
-/// et supprimer des livres dans la base de données. Elle permet également de
-/// gérer les relations entre les livres et leurs auteurs.
 class LivreViewModel extends ChangeNotifier {
-  /// Instance de [LivreDatabase] utilisée pour interagir avec la base de données des livres.
   final LivreDatabase _db = LivreDatabase();
-
-  /// Instance de [AuteurDatabase] utilisée pour interagir avec la base de données des auteurs.
   final AuteurDatabase _auteurDb = AuteurDatabase();
-
-  /// Liste locale des livres.
-  ///
-  /// Cette liste est mise à jour après chaque opération sur la base de données.
   List<Livre> _livres = [];
-
-  /// Liste locale des auteurs.
-  ///
-  /// Cette liste est mise à jour après chaque opération sur la base de données.
   List<Auteur> _auteurs = [];
-
-  /// Getter pour accéder à la liste des livres.
-  ///
-  /// Retourne une liste d'objets [Livre].
   List<Livre> get livres => _livres;
-
-  /// Getter pour accéder à la liste des auteurs.
-  ///
-  /// Retourne une liste d'objets [Auteur].
   List<Auteur> get auteurs => _auteurs;
 
   /// Récupère la liste des livres depuis la base de données et met à jour l'état local.

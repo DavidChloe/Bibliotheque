@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
-import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
-import '../../model/Livre.dart';
 
-/// Widget pour ajouter un nouveau livre.
-///
-/// Affiche un formulaire permettant de saisir le nom du livre et de sélectionner son auteur.
 class AjouterLivreView extends StatefulWidget {
+  const AjouterLivreView({super.key});
+
   @override
-  _AjouterLivreViewState createState() => _AjouterLivreViewState();
+  State<AjouterLivreView> createState() => _AjouterLivreViewState();
 }
 
 class _AjouterLivreViewState extends State<AjouterLivreView> {
@@ -28,7 +25,7 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Ajouter un Livre')),
+      appBar: AppBar(title: const Text('Ajouter un Livre')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -38,23 +35,19 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
             children: [
               TextFormField(
                 controller: _nomLivreController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Nom du Livre',
                   border: OutlineInputBorder(),
                 ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Veuillez entrer le nom du livre';
-                  }
-                  return null;
-                },
+                validator: (value) =>
+                value == null || value.isEmpty ? 'Veuillez entrer le nom du livre' : null,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Consumer<LivreViewModel>(
                 builder: (context, livreViewModel, child) {
                   return DropdownButtonFormField<int>(
                     value: _selectedAuteurId,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Auteur',
                       border: OutlineInputBorder(),
                     ),
@@ -65,26 +58,20 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
                       );
                     }).toList(),
                     onChanged: (value) {
-                      setState(() {
-                        _selectedAuteurId = value;
-                      });
+                      setState(() => _selectedAuteurId = value);
                     },
-                    validator: (value) {
-                      if (value == null) {
-                        return 'Veuillez sélectionner un auteur';
-                      }
-                      return null;
-                    },
+                    validator: (value) =>
+                    value == null ? 'Veuillez sélectionner un auteur' : null,
                   );
                 },
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: _ajouterLivre,
-                child: Text('Ajouter'),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
+                child: const Text('Ajouter'),
               ),
             ],
           ),
@@ -103,11 +90,11 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
         );
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Livre ajouté avec succès')),
+          const SnackBar(content: Text('Livre ajouté avec succès')),
         );
       } catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Erreur lors de l\'ajout du livre: $e')),
+          SnackBar(content: Text("Erreur lors de l'ajout : $e")),
         );
       }
     }

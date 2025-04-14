@@ -1,74 +1,91 @@
-import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:bcrypt/bcrypt.dart';
 import '../model/user.dart';
+import 'database.dart';
 
 class UserDatabase {
-  static const String tableName = 'users';
-  Database? _db;
+  final DatabaseClient _dbClient = DatabaseClient();
 
-  Future<Database> get database async {
-    if (_db != null) return _db!;
-    _db = await _initDatabase();
-    return _db!;
+  Future<List<User>> obtenirTousLesUtilisateurs() async {
+    final db = await _dbClient.database;
+    final List<Map<String, dynamic>> result = await db.query('USERS');
+    return result.map((userMap) => User.fromMap(userMap)).toList();
   }
 
-  Future<Database> _initDatabase() async {
-    final documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'user_database.db');
+  Future<int> ajouterUser({
+    required String nomUser,
+    required String prenomUser,
+    required String loginUser,
+    required String mdpUser,
+    required String roleUser,
+  }) async {
+    final db = await _dbClient.database;
+    final hashedPassword = BCrypt.hashpw(mdpUser, BCrypt.gensalt());
+    return await db.insert('USERS', {
+      'nomUser': nomUser,
+      'prenomUser': prenomUser,
+      'loginUser': loginUser,
+      'mdpUser': hashedPassword,
+      'roleUser': roleUser,
+    });
+  }
 
-    return openDatabase(
-      path,
-      version: 1,
-      onCreate: _createDb,
+  Future<int> mettreAJourUser({
+    required int idUser,
+    required String nomUser,
+    required String prenomUser,
+    required String loginUser,
+    required String mdpUser,
+    required String roleUser,
+  }) async {
+    final db = await _dbClient.database;
+    final hashedPassword = BCrypt.hashpw(mdpUser, BCrypt.gensalt());
+    return await db.update(
+      'USERS',
+      {
+        'nomUser': nomUser,
+        'prenomUser': prenomUser,
+        'loginUser': loginUser,
+        'mdpUser': hashedPassword,
+        'roleUser': roleUser,
+      },
+      where: 'idUser = ?',
+      whereArgs: [idUser],
     );
   }
 
-  Future<void> _createDb(Database db, int version) async {
-    await db.execute('''
-      CREATE TABLE $tableName (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        userName TEXT UNIQUE,
-        passwordHash TEXT,
-        role TEXT
-      )
-    ''');
+  Future<int> supprimerUser(int idUser) async {
+    final db = await _dbClient.database;
+    return await db.delete('USERS', where: 'idUser = ?', whereArgs: [idUser]);
   }
 
-  Future<int> addUser(User user) async {
-    final db = await database;
-    return db.insert(tableName, user.toMap());
-  }
+  Future<User?> verifierLogin(String login, String password) async {
+    final db = await _dbClient.database;
+    final result = await db.query('USERS', where: 'loginUser = ?', whereArgs: [login]);
 
-  Future<User?> getUserByUsername(String userName) async {
-    final db = await database;
-    List<Map<String, dynamic>> results = await db.query(
-      tableName,
-      where: 'userName = ?',
-      whereArgs: [userName],
-    );
-    if (results.isNotEmpty) {
-      return User.fromMap(results.first);
+    print('Résultat brut BDD: $result');
+
+    if (result.isNotEmpty) {
+      final userMap = result.first;
+      final hashed = userMap['mdpUser'];
+      print('Mot de passe haché en BDD: $hashed');
+      print('Mot de passe saisi: $password');
+
+      if (hashed is String && BCrypt.checkpw(password, hashed)) {
+        print('Mot de passe correct !');
+        return User.fromMap(userMap);
+      } else {
+        print('Mot de passe incorrect');
+      }
+    } else {
+      print('Aucun utilisateur trouvé avec ce login');
     }
+
     return null;
   }
 
-  Future<int> updateUser(User user) async {
-    final db = await database;
-    return db.update(
-      tableName,
-      user.toMap(),
-      where: 'id = ?',
-      whereArgs: [user.id],
-    );
-  }
-
-  Future<int> deleteUser(int id) async {
-    final db = await database;
-    return db.delete(
-      tableName,
-      where: 'id = ?',
-      whereArgs: [id],
-    );
+  Future<Map<String, dynamic>?> obtenirUserParLogin(String loginUser) async {
+    final db = await _dbClient.database;
+    final result = await db.query('USERS', where: 'loginUser = ?', whereArgs: [loginUser]);
+    return result.isNotEmpty ? result.first : null;
   }
 }

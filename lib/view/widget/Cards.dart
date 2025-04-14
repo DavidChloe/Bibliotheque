@@ -1,4 +1,4 @@
-import 'dart:io'; // Pour accéder les images locales
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
@@ -23,33 +23,37 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget? leadingWidget;
+
+    if (displayJacket) {
+      leadingWidget = ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: jacketPath != null && File(jacketPath!).existsSync()
+            ? Image.file(
+          File(jacketPath!),
+          width: 50,
+          height: 70,
+          fit: BoxFit.cover,
+        )
+            : Image.asset(
+          'assets/images/default_jacket.png', // image de jaquette par défaut
+          width: 50,
+          height: 70,
+          fit: BoxFit.cover,
+        ),
+      );
+    }
+
     return Card(
       color: Colors.grey[350],
       margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: ListTile(
-        leading: displayJacket && jacketPath != null
-            ? ClipRRect(
-          borderRadius: BorderRadius.circular(8.0),
-          child: Image.file(
-            File(jacketPath!),
-            width: 50,
-            height: 70,
-            fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) {
-              return const Icon(
-                Icons.error,
-                size: 50,
-                color: Colors.red,
-              );
-            },
-          ),
-        )
-            : null,
-        title: Text(title),
+        leading: leadingWidget,
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text(subtitle),
         onTap: () {
           if (userRole == 'admin' && onTap != null) {
-            onTap!(); // Seuls les admins peuvent utiliser onTap
+            onTap!();
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
@@ -64,7 +68,7 @@ class CustomCard extends StatelessWidget {
             if (userRole == 'admin' && onDelete != null)
               IconButton(
                 icon: const Icon(Icons.delete, color: Colors.blue),
-                onPressed: onDelete, // Appeler la fonction onDelete directement
+                onPressed: onDelete,
               ),
           ],
         ),

@@ -3,15 +3,13 @@ import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../model/Livre.dart';
 
-/// Widget pour modifier un livre existant.
-///
-/// Affiche un formulaire pré-rempli avec les informations du livre et permet de les mettre à jour.
 class ModifierLivreView extends StatefulWidget {
   final Livre livre;
 
-  ModifierLivreView({required this.livre});
+  const ModifierLivreView({super.key, required this.livre});
+
   @override
-  _ModifierLivreViewState createState() => _ModifierLivreViewState();
+  State<ModifierLivreView> createState() => _ModifierLivreViewState();
 }
 
 class _ModifierLivreViewState extends State<ModifierLivreView> {
@@ -25,13 +23,8 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Provider.of<LivreViewModel>(context, listen: false).chargerAuteurs();
     });
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _nomLivreController.text = widget.livre.nomLivre; // Use widget.livre
-    _selectedAuteurId = widget.livre.auteur.idAuteur; // Use widget.livre
+    _nomLivreController.text = widget.livre.nomLivre;
+    _selectedAuteurId = widget.livre.auteur.idAuteur;
   }
 
   @override
@@ -43,33 +36,28 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Modifier un Livre')),
+      appBar: AppBar(title: const Text('Modifier un Livre')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               TextFormField(
                 controller: _nomLivreController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Nom du Livre',
                   border: OutlineInputBorder(),
                 ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Veuillez entrer le nom du livre';
-                  }
-                  return null;
-                },
+                validator: (value) =>
+                value == null || value.isEmpty ? 'Veuillez entrer le nom du livre' : null,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Consumer<LivreViewModel>(
                 builder: (context, livreViewModel, child) {
                   return DropdownButtonFormField<int>(
                     value: _selectedAuteurId,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Auteur',
                       border: OutlineInputBorder(),
                     ),
@@ -79,27 +67,19 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
                         child: Text(auteur.nomAuteur),
                       );
                     }).toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        _selectedAuteurId = value;
-                      });
-                    },
-                    validator: (value) {
-                      if (value == null) {
-                        return 'Veuillez sélectionner un auteur';
-                      }
-                      return null;
-                    },
+                    onChanged: (value) => setState(() => _selectedAuteurId = value),
+                    validator: (value) =>
+                    value == null ? 'Veuillez sélectionner un auteur' : null,
                   );
                 },
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: _modifierLivre,
-                child: Text('Modifier'),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
+                child: const Text('Modifier'),
               ),
             ],
           ),
@@ -113,17 +93,17 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
       try {
         final livreViewModel = Provider.of<LivreViewModel>(context, listen: false);
         livreViewModel.mettreAJourLivre(
-          widget.livre.idLivre!, // Utilisez l'ID du livre existant
+          widget.livre.idLivre!,
           _nomLivreController.text,
           _selectedAuteurId!,
         );
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Livre modifié avec succès')),
+          const SnackBar(content: Text('Livre modifié avec succès')),
         );
       } catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Erreur lors de la modification du livre: $e')),
+          SnackBar(content: Text("Erreur lors de la modification : $e")),
         );
       }
     }

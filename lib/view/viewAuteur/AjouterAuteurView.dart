@@ -2,14 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 
-/// Ecran pour ajouter un nouvel auteur.
-///
-/// Contient un formulaire pour saisir le nom de l'auteur et un bouton pour l'ajouter à la base de données.
-class AjouterAuteurView extends StatelessWidget {
+class AjouterAuteurView extends StatefulWidget {
+  const AjouterAuteurView({Key? key}) : super(key: key);
+
+  @override
+  State<AjouterAuteurView> createState() => _AjouterAuteurViewState();
+}
+
+class _AjouterAuteurViewState extends State<AjouterAuteurView> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _nomAuteurController = TextEditingController();
 
-  AjouterAuteurView({Key? key}) : super(key: key);
+  @override
+  void dispose() {
+    _nomAuteurController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,23 +33,12 @@ class AjouterAuteurView extends StatelessWidget {
               TextFormField(
                 controller: _nomAuteurController,
                 decoration: const InputDecoration(labelText: 'Nom de l\'Auteur'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Veuillez entrer un nom d\'auteur';
-                  }
-                  return null;
-                },
+                validator: (value) =>
+                value == null || value.isEmpty ? 'Veuillez entrer un nom d\'auteur' : null,
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // Ajouter un auteur via le ViewModel
-                    Provider.of<AuteurViewModel>(context, listen: false)
-                        .ajouterAuteur(_nomAuteurController.text);
-                    Navigator.pop(context); // Revenir à la liste des auteurs
-                  }
-                },
+                onPressed: _ajouterAuteur,
                 child: const Text('Ajouter l\'auteur'),
               ),
             ],
@@ -49,5 +46,13 @@ class AjouterAuteurView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _ajouterAuteur() {
+    if (_formKey.currentState!.validate()) {
+      Provider.of<AuteurViewModel>(context, listen: false)
+          .ajouterAuteur(_nomAuteurController.text);
+      Navigator.pop(context);
+    }
   }
 }

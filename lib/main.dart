@@ -1,84 +1,46 @@
-/// @file main.dart
-/// @brief Point d'entrée de l'application de gestion de bibliothèque.
-///
-/// Ce fichier initialise l'application Flutter en utilisant MultiProvider pour gérer
-/// les ViewModels de `Livre` et `Auteur`, et configure les routes de navigation.
-
-import 'package:bibliotheque/view/viewUser/LoginView.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';  //flutter pub add provider
-import 'viewmodel/viewModelAuteur/AuteurViewModel.dart';
-import 'view/viewAuteur/AuteurListView.dart';
-import 'viewmodel/viewModelLivre/LivreViewModel.dart';
+import 'package:provider/provider.dart';
+import 'view/viewUser/LoginView.dart';
 import 'view/viewLivre/LivreListView.dart';
-import 'view/viewLivre/AjouterLivreView.dart';
-import 'view/viewLivre/ModifierLivreView.dart';
+import 'viewmodel/viewModelUser/UserViewModel.dart';
+import 'viewmodel/viewModelLivre/LivreViewModel.dart'; // ✅ import
+import 'viewmodel/viewModelAuteur/AuteurViewModel.dart'; // ✅ import
+import 'view/HomeScreen.dart';
+import 'view/viewAuteur/AuteurListView.dart';
 
-/// Fonction principale qui lance l'application.
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-/// @class MyApp
-/// @brief Classe principale de l'application Flutter.
-///
-/// Cette classe initialise `MultiProvider` pour gérer les `ViewModels`
-/// et définit les routes de navigation.
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => LivreViewModel()),
-        ChangeNotifierProvider(create: (context) => AuteurViewModel()),
+        ChangeNotifierProvider(create: (_) => UserViewModel()),
+        ChangeNotifierProvider(create: (_) => LivreViewModel()), // ✅ ajout
+        ChangeNotifierProvider(create: (_) => AuteurViewModel()), // ✅ ajout
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Gestion de Bibliothèque',
+        title: 'Gestion des Utilisateurs',
         theme: ThemeData(
           primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomePage(),
+        initialRoute: '/login',
         routes: {
-          '/Utilisateurs': (context)=> LoginView(),
-          '/livres': (context) => LivreListView(),
-          '/auteurs': (context) => AuteurListView(),
-          '/ajouterLivre': (context) => AjouterLivreView(),
-          // '/modifierLivre': (context) => ModifierLivreView(),
-        },
-      ),
-    );
-  }
-}
+          '/login': (context) => LoginView(),
+          '/home': (context) => HomeScreen(),
 
-/// @class HomePage
-/// @brief Écran d'accueil de l'application.
-///
-/// Cette classe affiche un écran d'accueil avec des boutons permettant de naviguer
-/// vers la gestion des livres et des auteurs.
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Gestion de Bibliothèque'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              child: Text('Gestion des Livres'),
-              onPressed: () => Navigator.pushNamed(context, '/livres'),
-            ),
-            SizedBox(height: 28),
-            ElevatedButton(
-              child: Text('Gestion des Auteurs'),
-              onPressed: () => Navigator.pushNamed(context, '/auteurs'),
-            ),
-          ],
-        ),
+          '/books': (context) {
+            final userRole = Provider.of<UserViewModel>(context, listen: false).userRole;
+            return LivreListView(userRole: userRole ?? 'user');
+          },
+
+          '/authors': (context) => AuteurListView(),
+        },
       ),
     );
   }
