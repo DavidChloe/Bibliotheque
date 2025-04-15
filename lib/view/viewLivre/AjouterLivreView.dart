@@ -17,22 +17,32 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
   @override
   void initState() {
     super.initState();
+    // Charger la liste des auteurs une fois la vue affichée
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Provider.of<LivreViewModel>(context, listen: false).chargerAuteurs();
     });
   }
 
   @override
+  void dispose() {
+    _nomLivreController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Ajouter un Livre')),
+      appBar: AppBar(
+        title: const Text('Ajouter un Livre'),
+        backgroundColor: Colors.blue[200],
+      ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16),
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              // Champ nom du livre
               TextFormField(
                 controller: _nomLivreController,
                 decoration: const InputDecoration(
@@ -40,39 +50,52 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) =>
-                value == null || value.isEmpty ? 'Veuillez entrer le nom du livre' : null,
+                value == null || value.trim().isEmpty
+                    ? 'Veuillez entrer le nom du livre'
+                    : null,
               ),
               const SizedBox(height: 16),
+
+              // Dropdown des auteurs
               Consumer<LivreViewModel>(
-                builder: (context, livreViewModel, child) {
+                builder: (context, vm, _) {
+                  final auteurs = vm.auteurs;
+
+                  if (auteurs.isEmpty) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+
                   return DropdownButtonFormField<int>(
                     value: _selectedAuteurId,
                     decoration: const InputDecoration(
-                      labelText: 'Auteur',
+                      labelText: 'Sélectionner un auteur',
                       border: OutlineInputBorder(),
                     ),
-                    items: livreViewModel.auteurs.map((auteur) {
+                    items: auteurs.map((auteur) {
                       return DropdownMenuItem<int>(
                         value: auteur.idAuteur,
                         child: Text(auteur.nomAuteur),
                       );
                     }).toList(),
-                    onChanged: (value) {
-                      setState(() => _selectedAuteurId = value);
-                    },
+                    onChanged: (value) => setState(() {
+                      _selectedAuteurId = value;
+                    }),
                     validator: (value) =>
                     value == null ? 'Veuillez sélectionner un auteur' : null,
                   );
                 },
               ),
+
               const SizedBox(height: 24),
+
+              // Bouton Ajouter
               ElevatedButton(
-                onPressed: _ajouterLivre,
+                onPressed: _soumettreFormulaire,
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
-                child: const Text('Ajouter'),
-              ),
+                child: const Text('Ajouter le Livre'),
+              )
             ],
           ),
         ),
@@ -80,22 +103,28 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
     );
   }
 
-  void _ajouterLivre() {
+  Future<void> _soumettreFormulaire() async {
     if (_formKey.currentState!.validate()) {
+      final nom = _nomLivreController.text.trim();
+      final idAuteur = _selectedAuteurId!;
+
+      final livreViewModel = Provider.of<LivreViewModel>(context, listen: false);
+
       try {
-        final livreViewModel = Provider.of<LivreViewModel>(context, listen: false);
-        livreViewModel.ajouterLivre(
-          _nomLivreController.text,
-          _selectedAuteurId!,
-        );
-        Navigator.pop(context);
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Livre ajouté avec succès')),
-        );
+        await livreViewModel.ajouterLivre(nom, idAuteur);
+        if (mounted) {
+          Navigator.pop(context);
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Livre ajouté avec succès')),
+          );
+        }
       } catch (e) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Erreur lors de l'ajout : $e")),
-        );
+        debugPrint('Erreur ajout livre: $e');
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Erreur lors de l\'ajout du livre')),
+          );
+        }
       }
     }
   }

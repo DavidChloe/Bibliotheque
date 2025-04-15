@@ -4,49 +4,44 @@ import 'database.dart';
 class LivreDatabase {
   final DatabaseClient _dbClient = DatabaseClient();
 
-  /// Ajoute un nouveau livre à la base de données.
-  ///
-  /// Retourne un `Future` contenant l'ID du livre nouvellement inséré.
-  Future<int> ajouterLivre(String nomLivre, int idAuteur) async {
+  /// Ajoute un nouveau livre à la base de données avec éventuellement une jaquette.
+  Future<int> ajouterLivre(String nomLivre, int idAuteur, {String? jacketPath}) async {
     final db = await _dbClient.database;
     return await db.insert('LIVRE', {
       'nomLivre': nomLivre,
       'idAuteur': idAuteur,
+      'jacket': jacketPath, // ✅ colonne jacket ajoutée
     });
   }
 
   /// Récupère tous les livres de la base de données.
-  ///
-  /// Retourne un `Future` contenant une liste de maps, chaque map représentant un livre.
   Future<List<Map<String, dynamic>>> obtenirTousLesLivres() async {
     final db = await _dbClient.database;
     return await db.query('LIVRE');
   }
 
-  /// Met à jour les informations d'un livre spécifique dans la base de données.
-  ///
-  /// Retourne un `Future` contenant le nombre de lignes affectées.
-  Future<int> mettreAJourLivre(int idLivre, String nomLivre, int idAuteur) async {
+  /// Met à jour les informations d'un livre spécifique (avec jacket).
+  Future<int> mettreAJourLivre(int idLivre, String nomLivre, int idAuteur, {String? jacketPath}) async {
     final db = await _dbClient.database;
     return await db.update(
       'LIVRE',
-      {'nomLivre': nomLivre, 'idAuteur': idAuteur},
+      {
+        'nomLivre': nomLivre,
+        'idAuteur': idAuteur,
+        'jacket': jacketPath, // ✅ mise à jour du champ jacket
+      },
       where: 'idLivre = ?',
       whereArgs: [idLivre],
     );
   }
 
-  /// Supprime un livre spécifique de la base de données.
-  ///
-  /// Retourne un `Future` contenant le nombre de lignes affectées.
+  /// Supprime un livre spécifique.
   Future<int> supprimerLivre(int idLivre) async {
     final db = await _dbClient.database;
     return await db.delete('LIVRE', where: 'idLivre = ?', whereArgs: [idLivre]);
   }
 
-  /// Récupère tous les livres écrits par un auteur spécifique.
-  ///
-  /// Retourne un `Future` contenant une liste de maps, chaque map représentant un livre.
+  /// Récupère tous les livres d’un auteur.
   Future<List<Map<String, dynamic>>> obtenirLivresParAuteur(int idAuteur) async {
     final db = await _dbClient.database;
     return await db.query(
@@ -56,15 +51,13 @@ class LivreDatabase {
     );
   }
 
-  /// Récupère tous les livres avec le nom de leur auteur.
-  ///
-  /// Retourne un `Future` contenant une liste de maps, chaque map contenant les informations du livre et le nom de l'auteur.
+  /// Récupère tous les livres avec nom d’auteur (jointure).
   Future<List<Map<String, dynamic>>> obtenirTousLesLivresAvecNomAuteur() async {
     final db = await _dbClient.database;
     return await db.rawQuery('''
-      SELECT LIVRE.*, AUTEUR.nomAuteur
-      FROM LIVRE
-      INNER JOIN AUTEUR ON LIVRE.idAuteur = AUTEUR.idAuteur
-    ''');
+    SELECT LIVRE.*, AUTEUR.idAuteur AS auteurId, AUTEUR.nomAuteur
+    FROM LIVRE
+    INNER JOIN AUTEUR ON LIVRE.idAuteur = AUTEUR.idAuteur
+  ''');
   }
 }

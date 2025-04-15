@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 /// Un widget représentant une boîte de dialogue pour confirmer ou annuler
 /// une suppression.
 ///

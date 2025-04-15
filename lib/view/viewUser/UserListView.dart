@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelUser/UserViewModel.dart';
 import '../../model/user.dart';
+import '../widget/ConfirmDeleteDialog.dart'; // ← le bon chemin selon ta structure
 import 'UserFormView.dart';
 import 'LoginView.dart';
 

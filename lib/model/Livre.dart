@@ -1,47 +1,68 @@
-/// @file Livre.dart
-/// @brief Modèle de données représentant un livre.
-
 import 'Auteur.dart';
 
-/// @class Livre
-/// @brief Classe représentant un livre.
-/// 
-/// Cette classe contient les informations sur un livre ainsi que son auteur.
 class Livre {
+  // Attributs
   int? _idLivre;
-  String _nomLivre;
-  Auteur _auteur;
+  late String _nomLivre;
+  late int _idAuteur;         // <- idAuteur directement stocké
+  late Auteur _auteur;
+  String? _jacketPath;
 
-  /// Constructeur de la classe Livre.
-  /// 
-  /// @param idLivre Identifiant unique du livre.
-  /// @param nomLivre Nom du livre.
-  /// @param auteur Objet Auteur associé au livre.
-  Livre({int? idLivre, required String nomLivre, required Auteur auteur})
-      : _idLivre = idLivre,
+  // Constructeur
+  Livre({
+    int? idLivre,
+    required String nomLivre,
+    required int idAuteur,
+    required Auteur auteur,
+    String? jacketPath,
+  })  : _idLivre = idLivre,
         _nomLivre = nomLivre,
-        _auteur = auteur;
+        _idAuteur = idAuteur,
+        _auteur = auteur,
+        _jacketPath = jacketPath;
 
-  /// Retourne l'identifiant du livre.
+  // Getters
   int? get idLivre => _idLivre;
-
-  /// Retourne le nom du livre.
   String get nomLivre => _nomLivre;
-
-  /// Retourne l'objet Auteur associé au livre.
+  int get idAuteur => _idAuteur;
   Auteur get auteur => _auteur;
+  String get nomAuteur => _auteur.nomAuteur;
+  String? get jacketPath => _jacketPath;
 
-  /// Modifie le nom du livre.
+  // Setters
   set nomLivre(String value) {
+    if (value.isEmpty) {
+      throw ArgumentError('Le nom du livre ne peut pas être vide.');
+    }
     _nomLivre = value;
   }
 
-  /// Crée un objet Livre à partir d'un Map (base de données).
-  factory Livre.fromMap(Map<String, dynamic> map) {
+  set jacketPath(String? value) {
+    _jacketPath = value;
+  }
+
+  set idAuteur(int value) {
+    _idAuteur = value;
+  }
+
+  // Convertir un Livre en Map (pour la base de données)
+  Map<String, dynamic> toMap() {
+    return {
+      'idLivre': _idLivre,
+      'nomLivre': _nomLivre,
+      'idAuteur': _idAuteur,
+      'jacket': _jacketPath,
+    };
+  }
+
+  // Créer un Livre à partir d'une Map (depuis la base de données)
+  factory Livre.fromMap(Map<String, dynamic> map, Auteur auteur) {
     return Livre(
       idLivre: map['idLivre'],
       nomLivre: map['nomLivre'],
-      auteur: Auteur.fromMap(map),
+      idAuteur: map['idAuteur'], // <- important ici aussi
+      auteur: auteur,
+      jacketPath: map['jacket'],
     );
   }
 }

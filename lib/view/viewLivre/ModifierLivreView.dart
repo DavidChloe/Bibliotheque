@@ -37,6 +37,7 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Modifier un Livre')),
+      backgroundColor: Colors.blue[200],
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(

@@ -8,6 +8,8 @@ import '../widget/Cards.dart';
 import 'AjouterAuteurView.dart';
 import 'ModifierAuteurView.dart';
 import '../widget/ConnectionBanner.dart';
+import '../../model/Livre.dart';
+
 
 class AuteurListView extends StatelessWidget {
   const AuteurListView({super.key});
@@ -21,6 +23,7 @@ class AuteurListView extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: const Text('Liste des Auteurs'),
+            backgroundColor: Colors.blue[200],
           ),
           body: ListView.builder(
             itemCount: auteurViewModel.auteurs.length,
@@ -42,9 +45,10 @@ class AuteurListView extends StatelessWidget {
                     ? () => livreViewModel.verifierEtConfirmerSuppression(
                   context,
                   auteurViewModel,
-                  auteur,
+                  auteur, // ✅ On passe bien l'objet ici
                 )
                     : null,
+
               );
             },
           ),

@@ -22,8 +22,10 @@ class _AjouterAuteurViewState extends State<AjouterAuteurView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(title: const Text('Ajouter un Auteur')),
+      appBar: AppBar(
+          title: const Text('Ajouter un Auteur'),
+    backgroundColor: Colors.blue[200],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
