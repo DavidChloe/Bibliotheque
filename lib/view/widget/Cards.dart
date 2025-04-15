@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
@@ -25,17 +26,28 @@ class CustomCard extends StatelessWidget {
     Widget? leadingWidget;
 
     if (displayJacket) {
-      leadingWidget = Container(
-        width: 50,
-        height: 70,
-        decoration: BoxDecoration(
-          color: Colors.blue[100],
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: const Icon(
-          Icons.book,
-          size: 40,
-          color: Colors.blueGrey,
+      final hasJacket = jacketPath != null && File(jacketPath!).existsSync();
+      leadingWidget = ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: hasJacket
+            ? Image.file(
+          File(jacketPath!),
+          width: 50,
+          height: 70,
+          fit: BoxFit.cover,
+        )
+            : Container(
+          width: 50,
+          height: 70,
+          decoration: BoxDecoration(
+            color: Colors.blue[100],
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: const Icon(
+            Icons.book,
+            size: 40,
+            color: Colors.blueGrey,
+          ),
         ),
       );
     }
