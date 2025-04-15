@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
-      <change afterPath="$PROJECT_DIR$/lib/view/viewPrets/PretListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +66,11 @@
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/view" />
+    </key>
+  </component>
   <component name="RunManager" selected="Flutter.Main">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="Bibliotheque" />

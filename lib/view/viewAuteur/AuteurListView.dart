@@ -31,7 +31,7 @@ class AuteurListView extends StatelessWidget {
               final Auteur auteur = auteurViewModel.auteurs[index];
               return CustomCard(
                 title: auteur.nomAuteur,
-                subtitle: 'ID : ${auteur.idAuteur}',
+                subtitle: 'Détails de l\'auteur',
                 userRole: userViewModel.userRole ?? 'user', // Pour appliquer les restrictions dans la carte
                 onTap: isAdmin
                     ? () => Navigator.push(
