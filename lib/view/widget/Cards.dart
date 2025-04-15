@@ -33,7 +33,7 @@ class CustomCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: const Icon(
-          Icons.menu_book,
+          Icons.book,
           size: 40,
           color: Colors.blueGrey,
         ),
