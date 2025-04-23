@@ -34,14 +34,14 @@ class _AjouterGenreViewState extends State<AjouterGenreView> {
             children: [
               TextFormField(
                 controller: _nomGenreController,
-                decoration: const InputDecoration(labelText: 'Nom de l\'Genre'),
+                decoration: const InputDecoration(labelText: 'Nom du Genre'),
                 validator: (value) =>
-                value == null || value.isEmpty ? 'Veuillez entrer un nom d\'genre' : null,
+                value == null || value.isEmpty ? 'Veuillez entrer un nom de genre' : null,
               ),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _ajouterGenre,
-                child: const Text('Ajouter l\'genre'),
+                child: const Text('Ajouter le genre'),
               ),
             ],
           ),

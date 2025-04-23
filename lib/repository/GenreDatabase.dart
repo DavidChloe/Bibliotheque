@@ -4,51 +4,47 @@ import 'Database.dart';
 class GenreDatabase {
   final DatabaseClient _dbClient = DatabaseClient();
 
-  /// Retourne un `Future` contenant l'ID de l'genre nouvellement inséré.
+  /// Ajoute un genre dans la table GENRE
   Future<int> ajouterGenre(String nomGenre) async {
     final db = await _dbClient.database;
-    return await db.insert('AUTEUR', {
+    return await db.insert('GENRE', {
       'nomGenre': nomGenre,
     });
   }
 
-  /// Récupère tous les genres de la base de données.
-  ///
-  /// Retourne un `Future` contenant une liste de maps, chaque map représentant un genre.
+  /// Récupère tous les genres de la base
   Future<List<Map<String, dynamic>>> obtenirTousLesGenres() async {
     final db = await _dbClient.database;
-    return await db.query('AUTEUR');
+    return await db.query('GENRE');
   }
 
-  /// Met à jour le nom d'un genre spécifique dans la base de données.
-  ///
-  /// Retourne un `Future` contenant le nombre de lignes affectées.
+  /// Met à jour un genre existant
   Future<int> mettreAJourGenre(int idGenre, String nomGenre) async {
     final db = await _dbClient.database;
     return await db.update(
-      'AUTEUR',
+      'GENRE',
       {'nomGenre': nomGenre},
       where: 'idGenre = ?',
       whereArgs: [idGenre],
     );
   }
 
-  // Supprime un genre spécifique de la base de données.
+  /// Supprime un genre par son ID
   Future<int> supprimerGenre(int idGenre) async {
     final db = await _dbClient.database;
-    return await db.delete('AUTEUR', where: 'idGenre = ?', whereArgs: [idGenre]);
+    return await db.delete('GENRE', where: 'idGenre = ?', whereArgs: [idGenre]);
   }
 
-  // Récupère tous les genres de la base de données, triés par ordre alphabétique de leur nom.
+  /// Récupère les genres triés par nom
   Future<List<Map<String, dynamic>>> obtenirGenresTriesAlphabetiquement() async {
     final db = await _dbClient.database;
     return await db.query(
-      'AUTEUR',
+      'GENRE',
       orderBy: "nomGenre ASC",
     );
   }
 
-  // Récupère tous les livres écrits par un genre spécifique.
+  /// Retourne tous les livres liés à un genre (si tu ajoutes une liaison)
   Future<List<Map<String, dynamic>>> obtenirLivresParGenre(int idGenre) async {
     final db = await _dbClient.database;
     return await db.query(

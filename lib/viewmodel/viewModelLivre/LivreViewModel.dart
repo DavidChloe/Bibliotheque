@@ -5,6 +5,8 @@ import '../../repository/AuteurDatabase.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 import '../../model/Auteur.dart'; // <-- Assure-toi que le fichier s'appelle auteur.dart
 import '../../model/Livre.dart';
+import '../../model/Genre.dart';
+import '../../model/LivreGenre.dart';
 import '../../view/widget/ConfirmDeleteDialog.dart';
 import '../../view/widget/ImpossibleDeleteDialog.dart';
 
@@ -124,4 +126,14 @@ class LivreViewModel extends ChangeNotifier {
       ),
     );
   }
+
+  Future<void> associerLivreGenre(int livreId, int genreId) async {
+    final db = await _db.database;  // Utilisation correcte de l'instance de base de données
+    await db.insert('LIVREGENRE', {
+      'idLivre': livreId,
+      'idGenre': genreId,
+    });
+  }
+
+
 }
