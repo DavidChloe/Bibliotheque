@@ -1,53 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
+import '../../viewmodel/viewModelGenre/GenreViewModel.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../viewmodel/viewModelUser/UserViewModel.dart';
-import '../../model/Auteur.dart';
+import '../../model/Genre.dart';
 import '../widget/Cards.dart';
-import 'AjouterAuteurView.dart';
-import 'ModifierAuteurView.dart';
+import 'AjouterGenreView.dart';
+import 'ModifierGenreView.dart';
 import '../widget/ConnectionBanner.dart';
 
 
-class AuteurListView extends StatelessWidget {
-  const AuteurListView({super.key});
+class GenreListView extends StatelessWidget {
+  const GenreListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Consumer3<AuteurViewModel, LivreViewModel, UserViewModel>(
-      builder: (context, auteurViewModel, livreViewModel, userViewModel, child) {
+    return Consumer3<GenreViewModel, LivreViewModel, UserViewModel>(
+      builder: (context, genreViewModel, livreViewModel, userViewModel, child) {
         final isAdmin = userViewModel.userRole == 'admin';
 
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Liste des Auteurs'),
+            title: const Text('Liste des Genres'),
             backgroundColor: Colors.blue[200],
           ),
           body: ListView.builder(
-            itemCount: auteurViewModel.auteurs.length,
+            itemCount: genreViewModel.genres.length,
             itemBuilder: (context, index) {
-              final Auteur auteur = auteurViewModel.auteurs[index];
+              final Genre genre = genreViewModel.genres[index];
               return CustomCard(
-                title: auteur.nomAuteur,
-                subtitle: 'Détails de l\'auteur',
+                title: genre.nomGenre,
+                subtitle: 'Type de genre',
                 userRole: userViewModel.userRole ?? 'user', // Pour appliquer les restrictions dans la carte
                 onTap: isAdmin
                     ? () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ModifierAuteurView(auteur: auteur),
+                    builder: (context) => ModifierGenreView(genre: genre),
                   ),
                 )
                     : null,
-                onDelete: isAdmin
-                    ? () => livreViewModel.verifierEtConfirmerSuppression(
-                  context,
-                  auteurViewModel,
-                  auteur, // On passe bien l'objet ici
-                )
-                    : null,
-
+                onDelete: () {
+                  genreViewModel.confirmerSuppressionGenre(
+                      context, genre, index);
+                },
               );
             },
           ),
@@ -57,7 +53,7 @@ class AuteurListView extends StatelessWidget {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const AjouterAuteurView(),
+                builder: (context) => const AjouterGenreView(),
               ),
             ),
           )

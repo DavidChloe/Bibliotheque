@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc" />
+    <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
+      <change afterPath="$PROJECT_DIR$/lib/model/Genre.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/model/LivreGenre.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repository/GenreDatabase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/view/viewGenre/AjouterGenreView.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/view/viewGenre/GenreListView.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/view/viewGenre/ModifierGenreView.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/viewmodel/viewModelGenre/GenreViewModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/Database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/Database.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/HomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/HomeScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +52,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2vGiG7ppBRqJei0oTGQ0copQQG2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,16 +70,21 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "genre",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ValadonChloe/Documents/GitHub/Bibliotheque",
+    "last_opened_file_path": "/Users/ValadonChloe/Documents/GitHub/Bibliotheque/lib/viewmodel/viewModelGenre",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/viewmodel/viewModelGenre" />
+      <recent name="$PROJECT_DIR$/lib/viewmodel" />
+      <recent name="$PROJECT_DIR$/lib/view/viewGenre" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/view" />
     </key>

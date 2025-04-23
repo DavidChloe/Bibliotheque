@@ -3,10 +3,13 @@ import 'package:provider/provider.dart';
 import 'view/viewUser/LoginView.dart';
 import 'view/viewLivre/LivreListView.dart';
 import 'viewmodel/viewModelUser/UserViewModel.dart';
-import 'viewmodel/viewModelLivre/LivreViewModel.dart'; // ✅ import
-import 'viewmodel/viewModelAuteur/AuteurViewModel.dart'; // ✅ import
+import 'viewmodel/viewModelLivre/LivreViewModel.dart';
+import 'viewmodel/viewModelAuteur/AuteurViewModel.dart';
+import 'viewmodel/viewModelGenre/GenreViewModel.dart';
 import 'view/HomeScreen.dart';
 import 'view/viewAuteur/AuteurListView.dart';
+import 'view/viewGenre/GenreListView.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +23,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => UserViewModel()),
-        ChangeNotifierProvider(create: (_) => LivreViewModel()), // ✅ ajout
-        ChangeNotifierProvider(create: (_) => AuteurViewModel()), // ✅ ajout
+        ChangeNotifierProvider(create: (_) => LivreViewModel()),
+        ChangeNotifierProvider(create: (_) => AuteurViewModel()),
+        ChangeNotifierProvider(create: (_) => GenreViewModel()),
+
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -40,6 +45,7 @@ class MyApp extends StatelessWidget {
           },
 
           '/authors': (context) => AuteurListView(),
+          '/genres': (context) => GenreListView(),
         },
       ),
     );

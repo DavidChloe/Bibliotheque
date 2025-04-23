@@ -34,6 +34,14 @@ class HomeScreen extends StatelessWidget {
               icon: Icon(Icons.person),
               label: Text("Accès aux auteurs"),
             ),
+            SizedBox(height: 20),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/genres');
+              },
+              icon: Icon(Icons.edit),
+              label: Text("Accès aux genres"),
+            ),
           ],
         ),
       ),

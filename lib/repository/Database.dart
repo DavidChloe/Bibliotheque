@@ -56,6 +56,13 @@ class DatabaseClient {
       )
     ''');
 
+    await db.execute('''
+      CREATE TABLE GENRE (
+        idGenre INTEGER PRIMARY KEY AUTOINCREMENT,
+        nomGenre TEXT NOT NULL
+      )
+    ''');
+
     // 🔐 Comptes par défaut avec mot de passe hashé
     await db.insert('USERS', {
       'nomUser': 'Admin',
