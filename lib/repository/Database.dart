@@ -21,7 +21,7 @@ class DatabaseClient {
 
     return await openDatabase(
       path,
-      version: 2, // 📌 change this number for each migration
+      version: 2, // number of migration
       onCreate: _onCreate,
       onUpgrade: _onUpgrade,
     );
@@ -74,14 +74,11 @@ class DatabaseClient {
     });
   }
 
-  /// 🎯 Pour gérer les mises à jour de structure de la base
+  // Pour gérer les mises à jour de structure de la base
   Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
     if (oldVersion < 2) {
       // 🆕 Ajout de la colonne jacket si elle n'existe pas
       await db.execute('ALTER TABLE LIVRE ADD COLUMN jacket TEXT');
     }
-
-    // Ajoute d'autres migrations ici si besoin
-    // if (oldVersion < 3) { ... }
   }
 }

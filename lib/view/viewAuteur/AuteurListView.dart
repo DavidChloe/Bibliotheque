@@ -8,7 +8,6 @@ import '../widget/Cards.dart';
 import 'AjouterAuteurView.dart';
 import 'ModifierAuteurView.dart';
 import '../widget/ConnectionBanner.dart';
-import '../../model/Livre.dart';
 
 
 class AuteurListView extends StatelessWidget {

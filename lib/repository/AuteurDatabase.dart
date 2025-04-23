@@ -33,17 +33,13 @@ class AuteurDatabase {
     );
   }
 
-  /// Supprime un auteur spécifique de la base de données.
-  ///
-  /// Retourne un `Future` contenant le nombre de lignes affectées.
+  // Supprime un auteur spécifique de la base de données.
   Future<int> supprimerAuteur(int idAuteur) async {
     final db = await _dbClient.database;
     return await db.delete('AUTEUR', where: 'idAuteur = ?', whereArgs: [idAuteur]);
   }
 
-  /// Récupère tous les auteurs de la base de données, triés par ordre alphabétique de leur nom.
-  ///
-  /// Retourne un `Future` contenant une liste de maps, chaque map représentant un auteur.
+  // Récupère tous les auteurs de la base de données, triés par ordre alphabétique de leur nom.
   Future<List<Map<String, dynamic>>> obtenirAuteursTriesAlphabetiquement() async {
     final db = await _dbClient.database;
     return await db.query(
@@ -52,9 +48,7 @@ class AuteurDatabase {
     );
   }
 
-  /// Récupère tous les livres écrits par un auteur spécifique.
-  ///
-  /// Retourne un `Future` contenant une liste de maps, chaque map représentant un livre.
+  // Récupère tous les livres écrits par un auteur spécifique.
   Future<List<Map<String, dynamic>>> obtenirLivresParAuteur(int idAuteur) async {
     final db = await _dbClient.database;
     return await db.query(

@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/Livre.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/Livre.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/User.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/AuteurDatabase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/AuteurDatabase.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/Database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/Database.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewAuteur/AuteurListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Podfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

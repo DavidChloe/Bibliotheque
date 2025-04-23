@@ -1,10 +1,11 @@
 import 'Auteur.dart';
 
 class Livre {
+
   // Attributs
   int? _idLivre;
   late String _nomLivre;
-  late int _idAuteur;         // <- idAuteur directement stocké
+  late int _idAuteur;
   late Auteur _auteur;
   String? _jacketPath;
 

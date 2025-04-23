@@ -37,7 +37,6 @@ class User {
     };
   }
 
-  // Optionnel mais pratique
   User copyWith({
     int? idUser,
     String? nomUser,
