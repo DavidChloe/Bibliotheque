@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../repository/LivreDatabase.dart';
 import '../../repository/AuteurDatabase.dart';
 import '../../repository/GenreDatabase.dart';
+import '../../repository/LivreGenreDatabase.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 import '../../model/Auteur.dart'; // <-- Assure-toi que le fichier s'appelle auteur.dart
 import '../../model/Livre.dart';
@@ -15,15 +16,19 @@ class LivreViewModel extends ChangeNotifier {
   final LivreDatabase _db = LivreDatabase();
   final AuteurDatabase _auteurDb = AuteurDatabase();
   final GenreDatabase _genreDb = GenreDatabase();
+  final LivreGenreDatabase _livreGenreDb = LivreGenreDatabase();
 
 
   List<Livre> _livres = [];
   List<Auteur> _auteurs = [];
   List<Genre> _genres = [];
+  List<LivreGenre> _livreGenres = [];
+
 
   List<Livre> get livres => _livres;
   List<Auteur> get auteurs => _auteurs;
   List<Genre> get genres => _genres;
+  List<LivreGenre> get livreGenres => _livreGenres;
 
 
   Future<void> chargerLivres() async {
@@ -133,13 +138,14 @@ class LivreViewModel extends ChangeNotifier {
     );
   }
 
-  /*Future<void> associerLivreGenre(int livreId, int genreId) async {
-    final db = await _db.database;  // Utilisation correcte de l'instance de base de données
-    await db.insert('LIVREGENRE', {
-      'idLivre': livreId,
-      'idGenre': genreId,
-    });
-  }*/
 
+  Future<int?> obtenirGenreAssocie(int idLivre) async {
+    return await LivreGenreDatabase.getGenreIdByLivre(idLivre);
+  }
+
+  Future<void> associerLivreGenre(int idLivre, int idGenre) async {
+    await _livreGenreDb.supprimerAssociationsPourLivre(idLivre); // supprime les anciennes associations
+    await _livreGenreDb.ajouterAssociation(idLivre, idGenre);    // ajoute la nouvelle
+  }
 
 }

@@ -33,11 +33,22 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
     _selectedAuteurId = widget.livre.idAuteur;
     _jacketPath = widget.livre.jacketPath;
 
-    // Charger les auteurs sans bloquer le build
-    Future.delayed(Duration.zero, () {
-      Provider.of<LivreViewModel>(context, listen: false).chargerAuteurs();
+    // Charger auteurs et genres
+    Future.delayed(Duration.zero, () async {
+      final livreVM = Provider.of<LivreViewModel>(context, listen: false);
+      final genreVM = Provider.of<GenreViewModel>(context, listen: false);
+
+      await livreVM.chargerAuteurs();
+      await genreVM.chargerGenres();
+
+      // 🔍 Récupérer le genre associé au livre
+      final idGenre = await livreVM.obtenirGenreAssocie(widget.livre.idLivre!);
+      setState(() {
+        _selectedGenreId = idGenre;
+      });
     });
   }
+
 
   @override
   void dispose() {
@@ -71,6 +82,10 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
           _selectedAuteurId!,
           jacketPath: _jacketPath,
         );
+
+        if (_selectedGenreId != null) {
+          await livreViewModel.associerLivreGenre(widget.livre.idLivre!, _selectedGenreId!);
+        }
 
         if (mounted) {
           Navigator.pop(context);

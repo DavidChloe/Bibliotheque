@@ -60,4 +60,14 @@ class LivreDatabase {
     INNER JOIN AUTEUR ON LIVRE.idAuteur = AUTEUR.idAuteur
   ''');
   }
+
+  /// Récupère tous les livres avec nom d’auteur (jointure).
+  Future<List<Map<String, dynamic>>> obtenirTousLesLivresAvecGenre() async {
+    final db = await _dbClient.database;
+    return await db.rawQuery('''
+    SELECT LIVRE.*, GENRE.idGenre AS genreId, GENRE.nomGenre
+    FROM LIVRE
+    INNER JOIN GENRE ON LIVRE.idLivre = Genre.idLivre
+  ''');
+  }
 }

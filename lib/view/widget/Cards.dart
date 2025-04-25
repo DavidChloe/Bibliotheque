@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class CustomCard extends StatelessWidget {
   final String title;
   final String subtitle;
+  final String? genre;
   final String? jacketPath;
   final VoidCallback? onTap;
   final VoidCallback? onDelete;
@@ -13,6 +14,7 @@ class CustomCard extends StatelessWidget {
   const CustomCard({
     required this.title,
     required this.subtitle,
+    this.genre,
     this.jacketPath,
     this.onTap,
     this.onDelete,
@@ -24,6 +26,8 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget? leadingWidget;
+
+
 
     if (displayJacket) {
       final hasJacket = jacketPath != null && File(jacketPath!).existsSync();
@@ -61,7 +65,17 @@ class CustomCard extends StatelessWidget {
           title,
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        subtitle: Text(subtitle),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(subtitle),
+            if (genre != null)
+              Text(
+                'Genre : $genre',
+                style: const TextStyle(fontSize: 12, fontStyle: FontStyle.italic),
+              ),
+          ],
+        ),
         onTap: () {
           if (userRole == 'admin' && onTap != null) {
             onTap!();

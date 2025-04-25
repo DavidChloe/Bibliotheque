@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../viewmodel/viewModelGenre/GenreViewModel.dart';
-
 import 'AjouterLivreView.dart';
 import 'ModifierLivreView.dart';
 import '../../model/Livre.dart';
 import '../../model/LivreGenre.dart';
-
 import '../../model/Auteur.dart';
 import '../widget/Cards.dart';
 import '../widget/ConnectionBanner.dart';
@@ -26,9 +24,9 @@ class _LivreListViewState extends State<LivreListView> {
   @override
   void initState() {
     super.initState();
-    // Charger les livres au démarrage du widget
-    Future.microtask(() =>
-        Provider.of<LivreViewModel>(context, listen: false).chargerLivres());
+    Future.microtask(() {
+      Provider.of<LivreViewModel>(context, listen: false).chargerLivres();
+    });
   }
 
   @override
@@ -45,25 +43,41 @@ class _LivreListViewState extends State<LivreListView> {
             itemCount: livreViewModel.livres.length,
             itemBuilder: (context, index) {
               final Livre livre = livreViewModel.livres[index];
-              return CustomCard(
-                title: livre.nomLivre,
-                subtitle: 'Auteur : ${livre.auteur.nomAuteur}',
-                    //Genre : ${}',
-                userRole: widget.userRole,
-                displayJacket: true,
-                jacketPath: livre.jacketPath,
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          ModifierLivreView(livre: livre),
-                    ),
+
+              return FutureBuilder<int?>(
+                future: livreViewModel.obtenirGenreAssocie(livre.idLivre!),
+                builder: (context, snapshot) {
+                  String? genreName;
+
+                  if (snapshot.hasData) {
+                    final genreId = snapshot.data;
+                    final genre = Provider.of<GenreViewModel>(context, listen: false)
+                        .genres
+                        .firstWhere((g) => g.idGenre == genreId);
+
+
+                    genreName = genre.nomGenre ?? "Aucun genre";
+                  }
+
+                  return CustomCard(
+                    title: livre.nomLivre,
+                    subtitle: 'Auteur : ${livre.auteur.nomAuteur}',
+                    genre: genreName != null ? '$genreName' : null,
+                    userRole: widget.userRole,
+                    displayJacket: true,
+                    jacketPath: livre.jacketPath,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ModifierLivreView(livre: livre),
+                        ),
+                      );
+                    },
+                    onDelete: () {
+                      livreViewModel.confirmerSuppressionLivre(context, livre, index);
+                    },
                   );
-                },
-                onDelete: () {
-                  livreViewModel.confirmerSuppressionLivre(
-                      context, livre, index);
                 },
               );
             },
