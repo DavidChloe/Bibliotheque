@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/kernel_snapshot_program.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/kernel_snapshot_program.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/bf0eac7c05254ffe58b65d706ed736ea/outputs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/4e7d74184eee9b13b58e1c8112125615/kernel_snapshot_program.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/.cxx/Debug/1p1038c3/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
@@ -24,10 +24,11 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repository/Database.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/Database.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repository/GenreDatabase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/GenreDatabase.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/viewGenre/AjouterGenreView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewGenre/AjouterGenreView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/view/viewGenre/GenreListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewGenre/GenreListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/AjouterLivreView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/AjouterLivreView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/ModifierLivreView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/ModifierLivreView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/viewmodel/viewModelLivre/LivreViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/viewmodel/viewModelLivre/LivreViewModel.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

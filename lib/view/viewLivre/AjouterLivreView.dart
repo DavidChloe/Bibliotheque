@@ -5,6 +5,8 @@ import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
+import '../../viewmodel/viewModelGenre/GenreViewModel.dart';
+
 
 class AjouterLivreView extends StatefulWidget {
   const AjouterLivreView({super.key});
@@ -17,6 +19,7 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
   final _formKey = GlobalKey<FormState>();
   final _nomLivreController = TextEditingController();
   int? _selectedAuteurId;
+  int? _selectedGenreId;
   String? _jacketPath;
 
   @override
@@ -150,6 +153,30 @@ class _AjouterLivreViewState extends State<AjouterLivreView> {
                   );
                 },
               ),
+              const SizedBox(height: 16),
+              Consumer<GenreViewModel>(
+                builder: (context, vm, _) {
+                  return DropdownButtonFormField<int>(
+                    value: _selectedGenreId,
+                    decoration: const InputDecoration(
+                      labelText: 'Genre',
+                      border: OutlineInputBorder(),
+                    ),
+                    items: vm.genres.map((genre) {
+                      return DropdownMenuItem<int>(
+                        value: genre.idGenre,
+                        child: Text(genre.nomGenre),
+                      );
+                    }).toList(),
+                    onChanged: (value) => setState(() {
+                      _selectedGenreId = value;
+                    }),
+                    validator: (value) =>
+                    value == null ? 'Veuillez sélectionner un genre' : null,
+                  );
+                },
+              ),
+
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: _soumettreFormulaire,

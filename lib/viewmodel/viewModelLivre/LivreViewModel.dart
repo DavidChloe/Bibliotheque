@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../../repository/LivreDatabase.dart';
 import '../../repository/AuteurDatabase.dart';
+import '../../repository/GenreDatabase.dart';
 import '../../viewmodel/viewModelAuteur/AuteurViewModel.dart';
 import '../../model/Auteur.dart'; // <-- Assure-toi que le fichier s'appelle auteur.dart
 import '../../model/Livre.dart';
@@ -13,12 +14,17 @@ import '../../view/widget/ImpossibleDeleteDialog.dart';
 class LivreViewModel extends ChangeNotifier {
   final LivreDatabase _db = LivreDatabase();
   final AuteurDatabase _auteurDb = AuteurDatabase();
+  final GenreDatabase _genreDb = GenreDatabase();
+
 
   List<Livre> _livres = [];
   List<Auteur> _auteurs = [];
+  List<Genre> _genres = [];
 
   List<Livre> get livres => _livres;
   List<Auteur> get auteurs => _auteurs;
+  List<Genre> get genres => _genres;
+
 
   Future<void> chargerLivres() async {
     try {
@@ -127,13 +133,13 @@ class LivreViewModel extends ChangeNotifier {
     );
   }
 
-  Future<void> associerLivreGenre(int livreId, int genreId) async {
+  /*Future<void> associerLivreGenre(int livreId, int genreId) async {
     final db = await _db.database;  // Utilisation correcte de l'instance de base de données
     await db.insert('LIVREGENRE', {
       'idLivre': livreId,
       'idGenre': genreId,
     });
-  }
+  }*/
 
 
 }

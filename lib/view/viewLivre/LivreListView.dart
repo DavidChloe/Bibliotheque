@@ -2,9 +2,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
+import '../../viewmodel/viewModelGenre/GenreViewModel.dart';
+
 import 'AjouterLivreView.dart';
 import 'ModifierLivreView.dart';
 import '../../model/Livre.dart';
+import '../../model/LivreGenre.dart';
+
 import '../../model/Auteur.dart';
 import '../widget/Cards.dart';
 import '../widget/ConnectionBanner.dart';
@@ -44,6 +48,7 @@ class _LivreListViewState extends State<LivreListView> {
               return CustomCard(
                 title: livre.nomLivre,
                 subtitle: 'Auteur : ${livre.auteur.nomAuteur}',
+                    //Genre : ${}',
                 userRole: widget.userRole,
                 displayJacket: true,
                 jacketPath: livre.jacketPath,

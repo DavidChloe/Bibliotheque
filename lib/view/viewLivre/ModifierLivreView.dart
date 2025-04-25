@@ -6,6 +6,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
 import '../../model/Livre.dart';
+import '../../viewmodel/viewModelGenre/GenreViewModel.dart';
+
 
 class ModifierLivreView extends StatefulWidget {
   final Livre livre;
@@ -20,6 +22,8 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
   final _formKey = GlobalKey<FormState>();
   final _nomLivreController = TextEditingController();
   int? _selectedAuteurId;
+  int? _selectedGenreId;
+
   String? _jacketPath;
 
   @override
@@ -157,6 +161,29 @@ class _ModifierLivreViewState extends State<ModifierLivreView> {
                     }),
                     validator: (value) =>
                     value == null ? 'Veuillez sélectionner un auteur' : null,
+                  );
+                },
+              ),
+              const SizedBox(height: 16),
+              Consumer<GenreViewModel>(
+                builder: (context, vm, _) {
+                  return DropdownButtonFormField<int>(
+                    value: _selectedGenreId,
+                    decoration: const InputDecoration(
+                      labelText: 'Genre',
+                      border: OutlineInputBorder(),
+                    ),
+                    items: vm.genres.map((genre) {
+                      return DropdownMenuItem<int>(
+                        value: genre.idGenre,
+                        child: Text(genre.nomGenre),
+                      );
+                    }).toList(),
+                    onChanged: (value) => setState(() {
+                      _selectedGenreId = value;
+                    }),
+                    validator: (value) =>
+                    value == null ? 'Veuillez sélectionner un genre' : null,
                   );
                 },
               ),

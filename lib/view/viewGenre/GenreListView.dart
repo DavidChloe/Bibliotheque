@@ -1,196 +1,86 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
+import '../../viewmodel/viewModelGenre/GenreViewModel.dart';
 import '../../viewmodel/viewModelLivre/LivreViewModel.dart';
-import '../../model/Genre.dart';  // Assure-toi que tu as une classe Genre
+import '../../viewmodel/viewModelUser/UserViewModel.dart';
+import '../../model/Genre.dart';
+import '../widget/Cards.dart';
+import 'AjouterGenreView.dart';
+import 'ModifierGenreView.dart';
+import '../widget/ConnectionBanner.dart';
 
-class AjouterLivreView extends StatefulWidget {
-  const AjouterLivreView({super.key});
+
+class GenreListView extends StatefulWidget {
+  const GenreListView({super.key});
 
   @override
-  State<AjouterLivreView> createState() => _AjouterLivreViewState();
+  State<GenreListView> createState() => _GenreListViewState();
 }
 
-class _AjouterLivreViewState extends State<AjouterLivreView> {
-  final _formKey = GlobalKey<FormState>();
-  final _nomLivreController = TextEditingController();
-  int? _selectedAuteurId;
-  String? _jacketPath;
-  int? _selectedGenreId;
-
+class _GenreListViewState extends State<GenreListView> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final livreViewModel = Provider.of<LivreViewModel>(context, listen: false);
-      livreViewModel.chargerAuteurs();
-      livreViewModel.chargerGenres(); // Charge les genres
+    // Charger les genres après montage
+    Future.microtask(() {
+      Provider.of<GenreViewModel>(context, listen: false).chargerGenres();
     });
   }
 
   @override
-  void dispose() {
-    _nomLivreController.dispose();
-    super.dispose();
-  }
-
-  Future<void> _pickImage(ImageSource source) async {
-    final picker = ImagePicker();
-    final picked = await picker.pickImage(source: source, imageQuality: 75);
-
-    if (picked != null) {
-      final directory = await getApplicationDocumentsDirectory();
-      final fileName = p.basename(picked.path);
-      final savedPath = p.join(directory.path, fileName);
-      await picked.saveTo(savedPath);
-
-      setState(() {
-        _jacketPath = savedPath;
-      });
-    }
-  }
-
-  Future<void> _soumettreFormulaire() async {
-    if (_formKey.currentState!.validate()) {
-      final nom = _nomLivreController.text.trim();
-      final idAuteur = _selectedAuteurId!;
-      final idGenre = _selectedGenreId!; // Récupère le genre sélectionné
-      final livreViewModel = Provider.of<LivreViewModel>(context, listen: false);
-
-      try {
-        await livreViewModel.ajouterLivre(nom, idAuteur, jacketPath: _jacketPath);
-        await livreViewModel.associerLivreGenre(livreViewModel.livres.last.idLivre!, idGenre); // Associer le genre au livre
-        if (mounted) {
-          Navigator.pop(context);
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Livre ajouté avec succès')),
-          );
-        }
-      } catch (e) {
-        debugPrint('Erreur ajout livre: $e');
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Erreur lors de l\'ajout du livre')),
-          );
-        }
-      }
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final imagePreview = _jacketPath != null && File(_jacketPath!).existsSync()
-        ? Image.file(File(_jacketPath!), width: 100, height: 150, fit: BoxFit.cover)
-        : Container(
-      width: 100,
-      height: 150,
-      decoration: BoxDecoration(
-        color: Colors.blue[100],
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: const Icon(Icons.book, size: 60, color: Colors.blueGrey),
-    );
+    return Consumer3<GenreViewModel, LivreViewModel, UserViewModel>(
+      builder: (context, genreViewModel, livreViewModel, userViewModel, child) {
+        final isAdmin = userViewModel.userRole == 'admin';
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ajouter un Livre'),
-        backgroundColor: Colors.blue[200],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Form(
-          key: _formKey,
-          child: ListView(
-            children: [
-              Center(child: imagePreview),
-              const SizedBox(height: 8),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton.icon(
-                    onPressed: () => _pickImage(ImageSource.camera),
-                    icon: const Icon(Icons.camera_alt),
-                    label: const Text('Caméra'),
-                  ),
-                  const SizedBox(width: 16),
-                  TextButton.icon(
-                    onPressed: () => _pickImage(ImageSource.gallery),
-                    icon: const Icon(Icons.photo_library),
-                    label: const Text('Galerie'),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 24),
-              TextFormField(
-                controller: _nomLivreController,
-                decoration: const InputDecoration(
-                  labelText: 'Nom du Livre',
-                  border: OutlineInputBorder(),
-                ),
-                validator: (value) =>
-                value == null || value.isEmpty ? 'Veuillez entrer le nom du livre' : null,
-              ),
-              const SizedBox(height: 16),
-              Consumer<LivreViewModel>(
-                builder: (context, vm, _) {
-                  return DropdownButtonFormField<int>(
-                    value: _selectedAuteurId,
-                    decoration: const InputDecoration(
-                      labelText: 'Auteur',
-                      border: OutlineInputBorder(),
-                    ),
-                    items: vm.auteurs.map((auteur) {
-                      return DropdownMenuItem<int>(
-                        value: auteur.idAuteur,
-                        child: Text(auteur.nomAuteur),
-                      );
-                    }).toList(),
-                    onChanged: (value) => setState(() {
-                      _selectedAuteurId = value;
-                    }),
-                    validator: (value) =>
-                    value == null ? 'Veuillez sélectionner un auteur' : null,
-                  );
-                },
-              ),
-              const SizedBox(height: 16),
-              Consumer<LivreViewModel>(
-                builder: (context, vm, _) {
-                  return DropdownButtonFormField<int>(
-                    value: _selectedGenreId,
-                    decoration: const InputDecoration(
-                      labelText: 'Genre',
-                      border: OutlineInputBorder(),
-                    ),
-                    items: vm.genres.map((genre) {
-                      return DropdownMenuItem<int>(
-                        value: genre.idGenre,
-                        child: Text(genre.nomGenre),
-                      );
-                    }).toList(),
-                    onChanged: (value) => setState(() {
-                      _selectedGenreId = value;
-                    }),
-                    validator: (value) =>
-                    value == null ? 'Veuillez sélectionner un genre' : null,
-                  );
-                },
-              ),
-              const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: _soumettreFormulaire,
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                ),
-                child: const Text('Ajouter le Livre'),
-              ),
-            ],
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text('Liste des Genres'),
+            backgroundColor: Colors.blue[200],
           ),
-        ),
-      ),
+          body: genreViewModel.genres.isEmpty
+              ? const Center(child: Text('Aucun genre disponible'))
+              : ListView.builder(
+            itemCount: genreViewModel.genres.length,
+            itemBuilder: (context, index) {
+              final genre = genreViewModel.genres[index];
+              return CustomCard(
+                title: genre.nomGenre,
+                subtitle: 'Type de genre',
+                userRole: userViewModel.userRole ?? 'user',
+                onTap: isAdmin
+                    ? () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ModifierGenreView(genre: genre),
+                  ),
+                )
+                    : null,
+                onDelete: isAdmin
+                    ? () => genreViewModel.confirmerSuppressionGenre(
+                  context,
+                  genre,
+                  index,
+                )
+                    : null,
+              );
+            },
+          ),
+          floatingActionButton: isAdmin
+              ? FloatingActionButton(
+            child: const Icon(Icons.add),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AjouterGenreView(),
+              ),
+            ),
+          )
+              : null,
+          bottomNavigationBar: const ConnectionBanner(),
+        );
+      },
     );
   }
 }
+
