@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7650eb-4d64-4ae5-b5fc-5b43e3b83882" name="Changes" comment="Generate doc , by dart-doc">
-      <change afterPath="$PROJECT_DIR$/lib/repository/LivreGenreDatabase.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repository/LivreDatabase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/LivreDatabase.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/LivreListView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/viewLivre/ModifierLivreView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/viewLivre/ModifierLivreView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/widget/Cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/widget/Cards.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/viewmodel/viewModelLivre/LivreViewModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/viewmodel/viewModelLivre/LivreViewModel.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
