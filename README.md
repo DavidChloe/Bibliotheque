@@ -26,9 +26,9 @@ Elle permet de gérer efficacement un inventaire de livres et le suivi des empru
 
 * **Framework :** Flutter (SDK stable)
 * **Langage :** Dart
-* **Architecture :** MVC / MVVM (selon l'organisation de ton code)
-* **Gestion d'état :** (Provider / Riverpod / Bloc - *à préciser selon ce que tu as utilisé*)
-* **Persistance des données :** (SQLite / SharedPreferences / API REST - *à préciser*)
+* **Architecture :** MVC / MVVM
+* **Gestion d'état :** (Provider)
+* **Persistance des données :** (SQLite)
 
 ---
 
