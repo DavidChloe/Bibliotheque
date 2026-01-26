@@ -1,19 +1,42 @@
-# bibliotheque
+# 📚 App Bibliothèque - Gestion Mobile
 
-New and last bibliotheque projet
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
 
-## Getting Started
+## 📱 À propos du projet
 
-This project is a starting point for a Flutter application.
+Ce projet est une **application mobile de gestion de bibliothèque** développée avec le framework **Flutter**.
 
-A few resources to get you started if this is your first Flutter project:
+Elle permet de gérer efficacement un inventaire de livres et le suivi des emprunts via une interface fluide et moderne. Ce projet a été réalisé dans le cadre de mon Bachelor pour monter en compétence sur le développement mobile et le langage Dart.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🔗 **URL du dépôt :** [https://github.com/DavidChloe/Bibliotheque](https://github.com/DavidChloe/Bibliotheque)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
 
-M'a permis de resoudre l'erreur lors du lancement :
-https://stackoverflow.com/questions/79354466/i-am-getting-error-of-something-while-building-app-in-vscode-with-flutter
+## ✨ Fonctionnalités
+
+* **Catalogue interactif :** Liste des ouvrages avec couvertures et détails.
+* **Recherche & Filtres :** Retrouver rapidement un livre par titre, auteur ou genre.
+* **Gestion des Stocks (CRUD) :** Ajout, modification et suppression de livres.
+* **Suivi des emprunts :** Visualisation des livres disponibles et de ceux actuellement empruntés.
+* **Interface UI/UX :** Design respectant les standards Material Design.
+
+---
+
+## 🛠️ Stack Technique
+
+* **Framework :** Flutter (SDK stable)
+* **Langage :** Dart
+* **Architecture :** MVC / MVVM (selon l'organisation de ton code)
+* **Gestion d'état :** (Provider / Riverpod / Bloc - *à préciser selon ce que tu as utilisé*)
+* **Persistance des données :** (SQLite / SharedPreferences / API REST - *à préciser*)
+
+---
+
+## 🚀 Installation et Lancement
+
+Pour tester l'application sur un émulateur ou un appareil physique :
+
+### 1. Cloner le dépôt
+```bash
+git clone [https://github.com/DavidChloe/Bibliotheque.git](https://github.com/DavidChloe/Bibliotheque.git)
+cd Bibliotheque
